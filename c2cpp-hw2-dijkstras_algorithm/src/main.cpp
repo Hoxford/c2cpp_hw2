@@ -1,9 +1,9 @@
 //============================================================================
-// Name        : c2cpp-hw2-dijkstras_algorithm.cpp
+// Name        : main.cpp
 // Author      : Matt B
 // Version     :
 // Copyright   : Coursera HW
-// Description : Dijkstra's Algorithm for a map graph
+// Description : Dijkstra's Algorithm for a map graph assignment
 //============================================================================
 
 /* Basic problem:
@@ -30,12 +30,13 @@
 
 #include <iostream>
 #include <vector>
+#include <list>
 
 #include "graph.hpp"
 #include "priority_queue.hpp"
+#include "shortest_path.hpp"
 
 using namespace std;
-
 
 int main() {
     Graph * dijkstras_graph = new Graph();

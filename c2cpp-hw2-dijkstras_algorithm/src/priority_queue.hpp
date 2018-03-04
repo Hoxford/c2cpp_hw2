@@ -8,11 +8,13 @@
 #ifndef PRIORITY_QUEUE_HPP_
 #define PRIORITY_QUEUE_HPP_
 
-class PriorityQueue
+using namespace std;
+
+class Priority_Queue
 {
 public:
-    PriorityQueue(){}
-    ~PriorityQueue(){}
+    Priority_Queue(){}
+    ~Priority_Queue(){}
     //chgPrioirity(PQ, priority): changes the priority (node value) of queue element.
     bool chgPrioirity(int priority);
     //removes the top element of the queue.
@@ -27,32 +29,32 @@ public:
     unsigned int size();
 };
 
-inline bool PriorityQueue::chgPrioirity(int priority)
+inline bool Priority_Queue::chgPrioirity(int priority)
 {
     return false;
 }
 
-inline unsigned int PriorityQueue::minPrioirty()
+inline unsigned int Priority_Queue::minPrioirty()
 {
     return false;
 }
 
-inline bool PriorityQueue::contains(unsigned int queue_element)
+inline bool Priority_Queue::contains(unsigned int queue_element)
 {
     return false;
 }
 
-inline bool PriorityQueue::Insert(unsigned int queue_element)
+inline bool Priority_Queue::Insert(unsigned int queue_element)
 {
     return false;
 }
 
-inline unsigned int PriorityQueue::top()
+inline unsigned int Priority_Queue::top()
 {
     return false;
 }
 
-inline unsigned int PriorityQueue::size()
+inline unsigned int Priority_Queue::size()
 {
     return false;
 }
