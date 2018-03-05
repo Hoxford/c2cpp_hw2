@@ -9,31 +9,60 @@
 #define SHORTEST_PATH_HPP_
 
 #include <list>
+#include "graph.hpp"
 
 using namespace std;
 
 class Shortest_Path
 {
 public:
-    Shortest_Path(){};
-    ~Shortest_Path(){};
-    //list of vertices in G(V,E).
-    //vertices(List);
-    //find shortest path between u-w and returns the sequence of vertices representing shortest path u-v1-v2-…-vn-w.
-    list<int> path(int u, int w);
+    //the constructor will determine the shortest path between start and end
+    Shortest_Path(Graph * graph, unsigned int start, unsigned int end);
+    ~Shortest_Path();
+    //returns the shortest path between start and end
+    list<unsigned int> *path();
     //return the path cost associated with the shortest path.
     unsigned int path_size(int u, int w);
+private:
+    unsigned int path_exists(unsigned int node_a, unsigned int node_b);
+    Priority_Queue<unsigned int, float> pQueue;
+    list<unsigned int> shortest_path_;
+    unsigned int start_;
+    unsigned int end_;
+    Graph * graph_;
 };
 
-inline list<int> Shortest_Path::path(int u, int w)
+Shortest_Path::Shortest_Path(Graph * graph, unsigned int start, unsigned int end)
 {
-    list<int> path;
-    return path;
+//    shortest_path_ = NULL;
+    start_ = start;
+    end_ = end;
+    graph_ = graph;
+
+}
+
+Shortest_Path::~Shortest_Path()
+{
+
+}
+
+inline list<unsigned int> *Shortest_Path::path()
+{
+    for(unsigned int i = 0; i < graph_->total_vertices_; i++)
+    {
+        if(graph_->)
+    }
+    return &shortest_path_;
 }
 
 unsigned int Shortest_Path::path_size(int u, int w)
 {
     return 0;
+}
+
+unsigned int Shortest_Path::path_exists(unsigned int node_a, unsigned int node_b)
+{
+
 }
 
 #endif /* SHORTEST_PATH_HPP_ */

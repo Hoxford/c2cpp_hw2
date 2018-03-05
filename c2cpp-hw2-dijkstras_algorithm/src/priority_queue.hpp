@@ -14,6 +14,59 @@
 
 using namespace std;
 
+class Shortest_Path
+{
+public:
+    //the constructor will determine the shortest path between start and end
+    Shortest_Path(Graph * graph, unsigned int start, unsigned int end);
+    ~Shortest_Path();
+    //returns the shortest path between start and end
+    list<unsigned int> *path();
+    //return the path cost associated with the shortest path.
+    unsigned int path_size(int u, int w);
+private:
+    unsigned int path_exists(unsigned int node_a, unsigned int node_b);
+    Priority_Queue<unsigned int, float> pQueue;
+    list<unsigned int> shortest_path_;
+    unsigned int start_;
+    unsigned int end_;
+    Graph * graph_;
+};
+
+Shortest_Path::Shortest_Path(Graph * graph, unsigned int start, unsigned int end)
+{
+//    shortest_path_ = NULL;
+    start_ = start;
+    end_ = end;
+    graph_ = graph;
+
+}
+
+Shortest_Path::~Shortest_Path()
+{
+
+}
+
+inline list<unsigned int> *Shortest_Path::path()
+{
+    for(unsigned int i = 0; i < graph_->total_vertices_; i++)
+    {
+        if(graph_->)
+    }
+    return &shortest_path_;
+}
+
+unsigned int Shortest_Path::path_size(int u, int w)
+{
+    return 0;
+}
+
+unsigned int Shortest_Path::path_exists(unsigned int node_a, unsigned int node_b)
+{
+
+}
+
+template <typename T1, typename T2>
 class Priority_Queue
 {
 public:
@@ -33,32 +86,38 @@ public:
     unsigned int size();
 };
 
-inline bool Priority_Queue::chgPrioirity(int priority)
+template <typename T1, typename T2>
+inline bool Priority_Queue<T1, T2>::chgPrioirity(int priority)
 {
     return false;
 }
 
-inline unsigned int Priority_Queue::minPrioirty()
+template <typename T1, typename T2>
+inline unsigned int Priority_Queue<T1, T2>::minPrioirty()
 {
     return false;
 }
 
-inline bool Priority_Queue::contains(unsigned int queue_element)
+template <typename T1, typename T2>
+inline bool Priority_Queue<T1, T2>::contains(unsigned int queue_element)
 {
     return false;
 }
 
-inline bool Priority_Queue::Insert(unsigned int queue_element)
+template <typename T1, typename T2>
+inline bool Priority_Queue<T1, T2>::Insert(unsigned int queue_element)
 {
     return false;
 }
 
-inline unsigned int Priority_Queue::top()
+template <typename T1, typename T2>
+inline unsigned int Priority_Queue<T1, T2>::top()
 {
     return false;
 }
 
-inline unsigned int Priority_Queue::size()
+template <typename T1, typename T2>
+inline unsigned int Priority_Queue<T1, T2>::size()
 {
     return false;
 }
