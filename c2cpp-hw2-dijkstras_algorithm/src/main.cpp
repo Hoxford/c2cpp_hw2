@@ -39,7 +39,11 @@
 using namespace std;
 
 int main() {
-    Graph * dijkstras_graph = new Graph();
-    cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
+    int verticies = 50;
+    float max_range = 9.5;
+    float density = 0.2;
+    Graph * graph = new Graph(verticies, max_range, density);
+
+    cout << "-fin-" << endl;
     return 0;
 }

@@ -8,6 +8,10 @@
 #ifndef PRIORITY_QUEUE_HPP_
 #define PRIORITY_QUEUE_HPP_
 
+#include <iostream>
+#include <vector>
+#include <list>
+
 using namespace std;
 
 class Priority_Queue
